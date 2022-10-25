@@ -107,7 +107,7 @@ public class Main {
 								
 						}
 						}
-						System.out.println("your currncy is:\t" + calamounty);
+						//System.out.println("your currncy is:\t" + calamounty);
 						
 						amountList.put(name,calamounty);
 						studentAmountList.put(student, amountList);
@@ -118,7 +118,7 @@ public class Main {
 						
 						}
 						}
-						//history.push(email);
+						history.push(email);
 
 						while (hasExit) {
 							Course newCourse = new Course();
