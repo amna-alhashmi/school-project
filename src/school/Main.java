@@ -118,7 +118,7 @@ public class Main {
 						
 						}
 						}
-						history.push(email);
+						//history.push(email);
 
 						while (hasExit) {
 							Course newCourse = new Course();
@@ -136,7 +136,7 @@ public class Main {
 							studentList.ourCourse.add(newCourse);
 							System.out.println("do you want to add course press 1 if not press 0");
 							//newCourse.ourMarks.add(newMarks);
-							// ourCourse.add(newCourse);
+							ourCourse.add(newCourse);
 							// ourMarks.add(newMarks);
 							
 							int exitoutput = sa.nextInt();
