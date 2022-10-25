@@ -72,7 +72,7 @@ public class Main {
 						String student = sa.next();
 						studentList.setStudentName(student);
 						history.push(student);
-						// ArrayList<Course> ourCourse=new ArrayList<>();
+						ArrayList<Course> ourCourse=new ArrayList<>();
 						// ArrayList<Marks> ourMarks=new ArrayList<>();
 						System.out.println("Enter Student Email:");
 						String email = sa.next();
@@ -107,7 +107,7 @@ public class Main {
 								
 						}
 						}
-						System.out.println("your currncy is:\t" + calamounty);
+						//System.out.println("your currncy is:\t" + calamounty);
 						
 						amountList.put(name,calamounty);
 						studentAmountList.put(student, amountList);
