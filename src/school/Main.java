@@ -23,7 +23,7 @@ public class Main {
 		//List<Integer> list = new LinkedList<Integer>();
 		//BigInteger factorial = new BigInteger("1");
 		 //BigInteger factor = null;
-		    //int limit=1;
+		    int limit=1;
 		    
 		Stack<String> history = new Stack<String>();
 		Main man=new Main();
@@ -257,7 +257,7 @@ public class Main {
 						
 						System.out.println("factorial of number :\t"+n+"\t"+"is\t"+fac);
 						//System.out.println("do you want to add another number press 1 if not 0");
-						int s=sa.nextInt();
+						//int s=sa.nextInt();
 						//if(s==0) {
 							//mMenue=false;
 						
