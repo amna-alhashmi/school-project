@@ -253,11 +253,11 @@ public class Main {
 								fac=fac.multiply(BigInteger.valueOf(i));
 							}
 						
-						System.out.println("the digits are\t:"+number);
+						//System.out.println("the digits are\t:"+number);
 						
 						System.out.println("factorial of number :\t"+n+"\t"+"is\t"+fac);
 						//System.out.println("do you want to add another number press 1 if not 0");
-						//int s=sa.nextInt();
+						int s=sa.nextInt();
 						//if(s==0) {
 							//mMenue=false;
 						
