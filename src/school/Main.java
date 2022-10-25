@@ -40,7 +40,7 @@ public class Main {
 		double calamounty = 0;
 		HashMap<String,Double> amountList =new HashMap<String,Double>();
 		HashMap<String,HashMap<String,Double>> studentAmountList =new HashMap<>();
-	    //Factorial factLong=new Factorial();
+	    Factorial factLong=new Factorial();
 		boolean eExit = true;
 		boolean isExit = true;
 		boolean hasExit = true;
@@ -72,7 +72,7 @@ public class Main {
 						String student = sa.next();
 						studentList.setStudentName(student);
 						history.push(student);
-						ArrayList<Course> ourCourse=new ArrayList<>();
+						//ArrayList<Course> ourCourse=new ArrayList<>();
 						// ArrayList<Marks> ourMarks=new ArrayList<>();
 						System.out.println("Enter Student Email:");
 						String email = sa.next();
