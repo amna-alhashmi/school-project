@@ -262,7 +262,17 @@ public class Main {
 							//mMenue=false;
 						
 					   break;
-					
+					case 2:
+						if(menue==2) {
+						hasExit=true
+						//isExit
+							
+						}
+						
+						
+						
+						
+						break;
 					   }
 				}while(true);
 				
