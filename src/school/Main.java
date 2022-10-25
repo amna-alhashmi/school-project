@@ -29,7 +29,7 @@ public class Main {
 		Main man=new Main();
 		ArrayList<School> schoolName = new ArrayList<>();
 		ArrayList<Student> studentEmail = new ArrayList<>();
-		 ArrayList<Course> ourCourse=new ArrayList<>();
+		 //ArrayList<Course> ourCourse=new ArrayList<>();
 		// ArrayList<Marks> ourMarks=new ArrayList<>();
 		Scanner sa = new Scanner(System.in);
 		ArrayList<String> emailList = new ArrayList<>();
@@ -107,7 +107,7 @@ public class Main {
 								
 						}
 						}
-						//System.out.println("your currncy is:\t" + calamounty);
+						System.out.println("your currncy is:\t" + calamounty);
 						
 						amountList.put(name,calamounty);
 						studentAmountList.put(student, amountList);
