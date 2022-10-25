@@ -264,7 +264,7 @@ public class Main {
 					   break;
 					case 2:
 						if(menue==2) {
-						hasExit=true
+						hasExit=true;
 						//isExit
 							
 						}
