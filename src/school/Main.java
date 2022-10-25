@@ -23,13 +23,13 @@ public class Main {
 		//List<Integer> list = new LinkedList<Integer>();
 		//BigInteger factorial = new BigInteger("1");
 		 //BigInteger factor = null;
-		    int limit=1;
+		    //int limit=1;
 		    
 		Stack<String> history = new Stack<String>();
 		Main man=new Main();
 		ArrayList<School> schoolName = new ArrayList<>();
 		ArrayList<Student> studentEmail = new ArrayList<>();
-		 //ArrayList<Course> ourCourse=new ArrayList<>();
+		 ArrayList<Course> ourCourse=new ArrayList<>();
 		// ArrayList<Marks> ourMarks=new ArrayList<>();
 		Scanner sa = new Scanner(System.in);
 		ArrayList<String> emailList = new ArrayList<>();
