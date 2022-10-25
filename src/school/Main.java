@@ -19,7 +19,7 @@ public class Main {
 		BigInteger fac=new BigInteger("1");
 		int n;
 		//final int digits = fac.toString().length();
-		 //BigInteger number = new BigInteger(fac.toString());
+		 BigInteger number = new BigInteger(fac.toString());
 		//List<Integer> list = new LinkedList<Integer>();
 		//BigInteger factorial = new BigInteger("1");
 		 //BigInteger factor = null;
@@ -29,7 +29,7 @@ public class Main {
 		Main man=new Main();
 		ArrayList<School> schoolName = new ArrayList<>();
 		ArrayList<Student> studentEmail = new ArrayList<>();
-		 ArrayList<Course> ourCourse=new ArrayList<>();
+		 //ArrayList<Course> ourCourse=new ArrayList<>();
 		// ArrayList<Marks> ourMarks=new ArrayList<>();
 		Scanner sa = new Scanner(System.in);
 		ArrayList<String> emailList = new ArrayList<>();
