@@ -29,7 +29,7 @@ public class Main {
 		Main man=new Main();
 		ArrayList<School> schoolName = new ArrayList<>();
 		ArrayList<Student> studentEmail = new ArrayList<>();
-		// ArrayList<Course> ourCourse=new ArrayList<>();
+		 ArrayList<Course> ourCourse=new ArrayList<>();
 		// ArrayList<Marks> ourMarks=new ArrayList<>();
 		Scanner sa = new Scanner(System.in);
 		ArrayList<String> emailList = new ArrayList<>();
@@ -40,7 +40,7 @@ public class Main {
 		double calamounty = 0;
 		HashMap<String,Double> amountList =new HashMap<String,Double>();
 		HashMap<String,HashMap<String,Double>> studentAmountList =new HashMap<>();
-	    Factorial factLong=new Factorial();
+	    //Factorial factLong=new Factorial();
 		boolean eExit = true;
 		boolean isExit = true;
 		boolean hasExit = true;
