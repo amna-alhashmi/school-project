@@ -99,7 +99,7 @@ public class Main {
 						} else if (currancy == 3) {
 							name = "SAR";
 							calamounty = amounty * 9.7;
-							//System.out.println("your currncy IN SAR is:\t" + calamounty);
+							System.out.println("your currncy IN SAR is:\t" + calamounty);
 						} else  {
 							if(currancy>4) {
 								currancy=0;
@@ -118,7 +118,7 @@ public class Main {
 						
 						}
 						}
-						history.push(email);
+						//history.push(email);
 
 						while (hasExit) {
 							Course newCourse = new Course();
