@@ -242,7 +242,7 @@ public class Main {
 					int menue = Integer.parseInt(b);
 					switch (menue) {
 					case 1:
-						//while(number.compareTo(BigInteger.ONE)>=0) {
+						while(number.compareTo(BigInteger.ONE)>=0) {
 					   //while(mMenue) {
 						System.out.println("Enter a number:");
 						n=sa.nextInt();	
