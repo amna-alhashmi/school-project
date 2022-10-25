@@ -19,7 +19,7 @@ public class Main {
 		BigInteger fac=new BigInteger("1");
 		int n;
 		//final int digits = fac.toString().length();
-		 BigInteger number = new BigInteger(fac.toString());
+		 //BigInteger number = new BigInteger(fac.toString());
 		//List<Integer> list = new LinkedList<Integer>();
 		//BigInteger factorial = new BigInteger("1");
 		 //BigInteger factor = null;
@@ -253,7 +253,7 @@ public class Main {
 								fac=fac.multiply(BigInteger.valueOf(i));
 							}
 						
-						//System.out.println("the digits are\t:"+number);
+						System.out.println("the digits are\t:"+number);
 						
 						System.out.println("factorial of number :\t"+n+"\t"+"is\t"+fac);
 						//System.out.println("do you want to add another number press 1 if not 0");
