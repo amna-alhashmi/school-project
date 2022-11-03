@@ -14,11 +14,9 @@ public class Main {
 		// TODO Auto-generated method stub
 
 	}
-
+	
 	ArrayList<School> schoolList = new ArrayList<>();
 
-	
-	
 	public void setSchoolName(ArrayList<School> schoolList) {
 		this.schoolList = schoolList;
 	}
@@ -26,12 +24,16 @@ public class Main {
 	public ArrayList<School> getSchoolList() {
 		return schoolList;
 	}
-
-	public static void main(String[] args) throws IOException {
+	
+	
+	
+	public static void main(String[] args) throws Throwable {
+		
 		Student studentList = new Student();
 		
 		BigInteger fac = new BigInteger("1");
 		int n;
+		
 		FileOutputStream fileOut;
 		ObjectOutputStream fOut = null;
 
@@ -44,14 +46,16 @@ public class Main {
 		}
 
 		Stack<String> history = new Stack<String>();
-		// Main man=new Main();
+		
 		ArrayList<School> schoolList = new ArrayList<>();
 		ArrayList<Student> studentEmail = new ArrayList<>();
-		// ArrayList<Course> ourCourse=new ArrayList<>();
-		// ArrayList<Marks> ourMarks=new ArrayList<>();
-		Scanner sa = new Scanner(System.in);
 		ArrayList<String> emailList = new ArrayList<>();
 		HashSet<String> eList = new HashSet<>();
+		HashMap<String, Double> amountList = new HashMap<String, Double>();
+		HashMap<String, HashMap<String, Double>> studentAmountList = new HashMap<>();
+		
+		Scanner sa = new Scanner(System.in);
+		
 		String name = "";
 		int currancy = 0;
 		double amounty = 0;
@@ -64,15 +68,16 @@ public class Main {
 		String teacherName = "AMNA";
 		String teacherId = "123";
 		int studentAgeInput;
-		HashMap<String, Double> amountList = new HashMap<String, Double>();
-		HashMap<String, HashMap<String, Double>> studentAmountList = new HashMap<>();
-		// Factorial factLong=new Factorial();
+		
 		boolean schoolExit = true;
 		boolean studentExit = true;
 		boolean courseExit = true;
 		boolean amountExit = true;
 		boolean loop = true;
 		boolean teacherExit = true;
+		
+		
+		
 		while (teacherExit) {
 			try {
 				System.out.println("Enter teacher name:");
@@ -117,7 +122,7 @@ public class Main {
 						case 1:
 							while (schoolExit) {
 								School ourSchool = new School();
-
+                                ourSchool.finalize();
 								System.out.println("Enter School Name:");
 								String school = sa.next();
 								ourSchool.setSchoolName(school);
@@ -135,12 +140,17 @@ public class Main {
 								studentExit = Boolean.TRUE;
 
 								while (studentExit) {
+									studentList.finalize();
 									System.out.println("Enter Student Age");
 									studentAgeInput=sa.nextInt();
 									studentList.setStudentAge(studentAgeInput);
 									studentList.studentAge(studentAgeInput);
 									if (studentAgeInput>6&&studentAgeInput<18) {
 								System.out.println("Can join to school");
+								
+								
+								
+								
 									//Student studentList = new Student();
 									System.out.println("Enter Student Name:");
 									String student = sa.next();
@@ -154,14 +164,6 @@ public class Main {
 										System.out.println(e.getMessage());
 										continue;
 									}
-									
-										
-									
-									
-									
-									
-									
-									
 									
 									System.out.println("Enter Student Email:");
 									String email = sa.next();
@@ -202,7 +204,6 @@ public class Main {
 
 											}
 										}
-										// System.out.println("your currncy is:\t" + calamounty);
 
 										amountList.put(name, calamounty);
 										studentAmountList.put(student, amountList);

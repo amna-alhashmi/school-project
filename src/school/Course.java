@@ -3,8 +3,14 @@ package school;
 import java.util.ArrayList;
 
 public class Course {
-	ArrayList<Marks> ourMarks = new ArrayList<>();
 
+	ArrayList<Marks> ourMarks = new ArrayList<>();
+	String courseName;
+	
+	
+	
+	
+	
 	public void setOurMarks(ArrayList<Marks> ourMarks) {
 		this.ourMarks = ourMarks;
 	}
@@ -13,7 +19,7 @@ public class Course {
 		return ourMarks;
 	}
 
-	String courseName;
+	
 
 	public void setCourseName(String a) {
 		this.courseName = a;
