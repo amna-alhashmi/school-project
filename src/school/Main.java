@@ -233,15 +233,6 @@ public class Main {
                                         }
 										
 										
-										
-										
-										
-										
-										
-										
-										
-										
-										
 										try {
 										System.out.println("Enter course Mark:");
 										String coursemar = sa.next();

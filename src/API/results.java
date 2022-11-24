@@ -7,8 +7,16 @@ private String email;
 private String  phone;
 private String cell;
 private String nat;
+private String dob;
 
 
+
+public String getDob() {
+	return dob;
+}
+public void setDob(String dob) {
+	this.dob = dob;
+}
 private Name name;
 private Location location;
 private Login login;
