@@ -1,6 +1,6 @@
 package API;
 
-public class dob {
+public class Dob {
 	
 	private String date;
 	private int age; 

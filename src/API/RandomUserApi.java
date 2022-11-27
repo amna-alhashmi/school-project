@@ -1,6 +1,7 @@
 package API;
 
 import java.util.List;
+
 import java.util.Scanner;
 
 import javax.xml.crypto.Data;
@@ -41,7 +42,7 @@ public class RandomUserApi {
 //        }
 //        
 		while (menuExit) {
-
+			System.out.println("PLS CHOOSE ONE OPTION");
 			System.out.println("1.MULTIPL USERS");
 			System.out.println("2.PAGINATION");
 			System.out.println("3.PASSWORDS");
@@ -85,6 +86,7 @@ public class RandomUserApi {
 								for (int k = 0; k < informationString.length(); k++) {
 
 									System.out.println("##################################");
+									System.out.println("The Login Is : " + results1.getResults().get(0).getName().getFirstName());
 									System.out.println("The Login Is : " + results1.getResults().get(0).getGender());
 									System.out.println("The Email Is : " + results1.getResults().get(0).getEmail());
 									System.out.println("The Phone Is : " + results1.getResults().get(0).getPhone());
@@ -206,14 +208,9 @@ public class RandomUserApi {
 			Gson gsonn = new Gson();
 
 			ExecAPI results3 = gsonn.fromJson(informationStringg.toString(), ExecAPI.class);
-			System.out.println("The password Is : " + results3.getResults().get(0).getLOGIN().getPassword());
+			System.out.println("The password Is : " + results3.getResults().get(0).getLogin().getPassword());
 			
 
-		
-	
-				
-				
-				
 				break;
 			
 	        case 4:
@@ -339,6 +336,11 @@ public class RandomUserApi {
 			
 	        case 8:
 	        	System.out.println("Enter Include fields:");
+	        	System.out.println("gender");
+	        	System.out.println("email");
+	        	System.out.println("phone");
+	        	System.out.println("cell");
+	        	System.out.println("Nationality");
 	        	String include=sa.next();
 	        	 
 	        	URL ur7 = new URL("https://randomuser.me/api/?inc="+include);
@@ -361,46 +363,21 @@ public class RandomUserApi {
 	
 			Gson g7 = new Gson();
 			ExecAPI results8 = g7.fromJson(informationString8.toString(), ExecAPI.class);
-			System.out.println("The Name is : " +results8.getResults().get(0).getName().getFirstName());
+//     		System.out.println("The Name is : " +results8.getResults().get(0).getName().getTitleName());
 			System.out.println("The Gender is : " +results8.getResults().get(0).getGender());
 			System.out.println("The email is : " +results8.getResults().get(0).getEmail());
 			System.out.println("The phone is : " +results8.getResults().get(0).getPhone());
 			System.out.println("The cell is : " +results8.getResults().get(0).getCell());
 			System.out.println("The Nationality is : " +results8.getResults().get(0).getNat());
 			System.out.println("The include field is:"+include);
+			System.out.println("##########################");
+			break;
 	        	
-	        case 9:
-	        	System.out.println("enter extra parameters: ");
-	        	String parameters=sa.next();
-	        	 
-	        	URL ur8 = new URL("https://randomuser.me/api/?dl="+parameters);
-				HttpURLConnection connection8 = (HttpURLConnection) ur8.openConnection();
-				connection8.setRequestMethod("GET");
-				connection8.connect();
-				StringBuilder informationString9 = new StringBuilder();
-				int responseCode9 = connection8.getResponseCode();
-				if (responseCode9 != 200) {
-					throw new RuntimeException("HttpresponseCode" + responseCode9);
-
-				} else {
-
-					Scanner scanner = new Scanner(ur8.openStream());
-					while (scanner.hasNext()) {
-						informationString9.append(scanner.nextLine());
-					}
-				
-				}		
-	
-			Gson g8 = new Gson();
-			ExecAPI results9 = g8.fromJson(informationString9.toString(), ExecAPI.class);
-			System.out.println("The Name is : " +results9.getResults().get(0).getName().getFirstName());
-			System.out.println("The include field is:"+parameters);
-	        	
-			
+	       
 			}
 			
-			
-			
+		}
+		
 			menuExit=false;
-
-		}}}
+		
+		}}

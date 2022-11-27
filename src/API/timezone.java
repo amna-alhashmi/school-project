@@ -1,13 +1,14 @@
 package API;
 
-public class timezone {
-private int	offset;
+public class Timezone {
+private String	offset;
 private String description;
 
-public int getOffset() {
+
+public String getOffset() {
 	return offset;
 }
-public void setOffset(int offset) {
+public void setOffset(String offset) {
 	this.offset = offset;
 }
 public String getDescription() {

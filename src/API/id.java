@@ -1,6 +1,6 @@
 package API;
 
-public class id {
+public class Id {
 	
 	private String	name;
 	private String value; 

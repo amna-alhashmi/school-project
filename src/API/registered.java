@@ -1,6 +1,6 @@
 package API;
 
-public class registered {
+public class Registered {
 	
 	private String	date;
 	private int age; 

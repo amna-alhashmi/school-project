@@ -6,9 +6,9 @@ private String state;
 private String country;
 private String postcode;
 
-street STREET;
-coordinates COORDINATES;
-timezone TIMEZONE;
+Street STREET;
+Coordinates COORDINATES;
+Timezone TIMEZONE;
 
 public String getCity() {
 	return city;

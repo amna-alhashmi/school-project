@@ -1,6 +1,6 @@
 package API;
 
-public class street {
+public class Street {
 private int	streetNumber;
 private String streetName;
 

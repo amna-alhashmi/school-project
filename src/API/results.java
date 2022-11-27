@@ -1,50 +1,21 @@
 package API;
 
-public class results {
+public class Results {
 
 private String gender;
 private String email;
 private String  phone;
 private String cell;
 private String nat;
-private String dob;
 
 
-
-public String getDob() {
-	return dob;
-}
-public void setDob(String dob) {
-	this.dob = dob;
-}
 private Name name;
 private Location location;
 private Login login;
-private dob DOB;
-private registered REGISTERED;
-private id ID;
-private picture PICTURE;
-
-
-
-public Login getLOGIN() {
-	return login;
-}
-public void setLOGIN(Login lOGIN) {
-	login = lOGIN;
-}
-public Location getLOCATION() {
-	return location;
-}
-public void setLOCATION(Location lOCATION) {
-	location = lOCATION;
-}
-public Name getName() {
-	return name;
-}
-public void setName(Name name) {
-	name = name;
-}
+private Dob dob;
+private Registered registered;
+private Id id;
+private picture picture;
 public String getGender() {
 	return gender;
 }
@@ -75,6 +46,50 @@ public String getNat() {
 public void setNat(String nat) {
 	this.nat = nat;
 }
+public Name getName() {
+	return name;
+}
+public void setName(Name name) {
+	this.name = name;
+}
+public Location getLocation() {
+	return location;
+}
+public void setLocation(Location location) {
+	this.location = location;
+}
+public Login getLogin() {
+	return login;
+}
+public void setLogin(Login login) {
+	this.login = login;
+}
+public Dob getDob() {
+	return dob;
+}
+public void setDob(Dob dob) {
+	this.dob = dob;
+}
+public Registered getRegistered() {
+	return registered;
+}
+public void setRegistered(Registered registered) {
+	this.registered = registered;
+}
+public Id getId() {
+	return id;
+}
+public void setId(Id id) {
+	this.id = id;
+}
+public picture getPicture() {
+	return picture;
+}
+public void setPicture(picture picture) {
+	this.picture = picture;
+}
+
+
 
 
 }

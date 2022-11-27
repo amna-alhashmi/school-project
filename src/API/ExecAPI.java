@@ -3,12 +3,12 @@ package API;
 import java.util.List;
 
 public class ExecAPI {
-	private List<results> results;
+	private List<Results> results;
 	private info info;
-	public List<results> getResults() {
+	public List<Results> getResults() {
 		return results;
 	}
-	public void setResults(List<results> results) {
+	public void setResults(List<Results> results) {
 		this.results = results;
 	}
 	public info getInfo() {
