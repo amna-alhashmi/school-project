@@ -1,5 +1,6 @@
 package API;
 
+import java.util.Iterator;
 import java.util.List;
 
 import java.util.Scanner;
@@ -11,10 +12,19 @@ import java.net.http.HttpResponse;
 import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.http.HttpClient;
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.Reader;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import com.google.gson.Gson;
 import org.xml.sax.ErrorHandler;
 
@@ -26,21 +36,6 @@ public class RandomUserApi {
 		boolean userExit = true;
 		Scanner sa = new Scanner(System.in);
 
-//        HttpClient client2 = HttpClient.newHttpClient();
-//        HttpRequest request2 = HttpRequest.newBuilder()
-//        .uri(URI.create("https://randomuser.me/api/"))
-//        .build();
-//
-//       HttpResponse<String> response8 = client2.send(request2,HttpResponse.BodyHandlers.ofString());
-//        String uglyJsonString2 = response8.body();
-//
-//        if (uglyJsonString2.contains("error")) {
-//        System.out.println("We have error");
-//        Gson gs = new Gson();
-//        Error errorHandling = gs.fromJson(response8.body(), Error.class);
-//        System.out.println(errorHandling.getErrorUser());
-//        }
-//        
 		while (menuExit) {
 			System.out.println("PLS CHOOSE ONE OPTION");
 			System.out.println("1.MULTIPL USERS");
@@ -52,6 +47,7 @@ public class RandomUserApi {
 			System.out.println("7.Nationality");
 			System.out.println("8.Including/Excluding fields");
 			System.out.println("9.Miscellaneous");
+			System.out.println("JSON files");
 			String a = sa.next();
 			int option = Integer.parseInt(a);
 			switch (option) {
@@ -91,7 +87,7 @@ public class RandomUserApi {
 									System.out.println("The Email Is : " + results1.getResults().get(0).getEmail());
 									System.out.println("The Phone Is : " + results1.getResults().get(0).getPhone());
 									System.out.println("#################################");
-
+									
 								}
 							}
 						} else {
@@ -373,6 +369,47 @@ public class RandomUserApi {
 			System.out.println("##########################");
 			break;
 	        	
+	        case 9:
+	        	try {
+	        	URL urlFile = new URL("https://randomuser.me/api/?results=30");
+				HttpURLConnection connFile = (HttpURLConnection) urlFile.openConnection();
+				connFile.setRequestMethod("GET");
+				connFile.connect();
+				informationString = new StringBuilder();
+				int responseCoded = connFile.getResponseCode();
+				if (responseCoded != 200) {
+					throw new RuntimeException("HttpresponseCode");
+
+				} else {
+
+					Scanner scanner = new Scanner(urlFile.openStream());
+					while (scanner.hasNext()) {
+						informationString.append(scanner.nextLine());
+					}
+					scanner.close();
+					FileWriter filewrite = new FileWriter("JSONFile.txt");
+					String infoFile = informationString.toString();
+					filewrite.write(infoFile);
+					System.out.println("File Create Successful ... ");
+
+					//System.out.println(informationString);
+					Reader read = new BufferedReader(new FileReader("JSONFile.txt"));
+					Gson gsons = new Gson();
+					ExecAPI results1 = gsons.fromJson(read, ExecAPI.class);
+	        	    
+					System.out.println("The Login Is : " + results1.getResults().get(0).getName().getFirstName());
+					System.out.println("The Login Is : " + results1.getResults().get(0).getGender());
+					System.out.println("The Email Is : " + results1.getResults().get(0).getEmail());
+					System.out.println("The Phone Is : " + results1.getResults().get(0).getPhone());
+	        	
+				}
+	        	
+	        	}catch(Exception e) {
+	        		System.out.println(e);
+	        	}
+			
+	        	
+	        	break;
 	       
 			}
 			
